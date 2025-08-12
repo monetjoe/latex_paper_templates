@@ -1,0 +1,267 @@
+% Template for ICME paper; to be used with:
+%          spconf.sty  - ICASSP/ICIP/ICME LaTeX style file, and
+%          IEEEbib.bst - IEEE bibliography style file.
+% --------------------------------------------------------------------------
+\documentclass{article}
+\usepackage{spconf,amsmath,epsfig}
+
+\let\OLDthebibliography\thebibliography
+\renewcommand\thebibliography[1]{
+  \OLDthebibliography{#1}
+  \setlength{\parskip}{0pt}
+  \setlength{\itemsep}{0pt plus 0.3ex}
+}
+
+\pagestyle{empty}
+
+
+\begin{document}\sloppy
+
+% Example definitions.
+% --------------------
+\def\x{{\mathbf x}}
+\def\L{{\cal L}}
+
+
+% Title.
+% ------
+\title{AUTHOR GUIDELINES FOR ICME PROCEEDINGS}
+%
+% Single address.
+% ---------------
+\name{Anonymous ICME submission}
+%Address and e-mail should NOT be added in the submission paper. They should be present only in the camera ready paper. 
+\address{}
+
+
+\maketitle
+
+
+%
+\begin{abstract}
+  The abstract should appear at the top of the left-hand column of text, about 0.5 inch (12 mm) below the title area and no more than 3.125 inches (80 mm) in length.  Leave a 0.5 inch (12 mm) space between the end of the abstract and the beginning of the main text.  The abstract should contain about 100 to 150 words, and should be identical to the abstract text submitted electronically along with the paper cover sheet.  All manuscripts must be in English, printed in black ink.
+\end{abstract}
+%
+\begin{keywords}
+  One, two, three, four, five
+\end{keywords}
+%
+\section{Introduction}
+\label{sec:intro}
+
+These guidelines include complete descriptions of the fonts, spacing, and related information for producing your proceedings manuscripts. Please follow them.
+
+\subsection{Language}
+
+All manuscripts must be in English.
+
+\subsection{Paper length}
+
+Papers should be no longer than 6 pages, including all text, figures, and references.
+
+\subsection{Supplemental material}
+
+Authors may optionally upload supplemental material. Typically, this material might include:
+\begin{itemize}
+  \item a short presentation summarizing the paper,
+  \item videos of results that cannot be included in the main paper,
+  \item screen recording of the running program
+  \item anonymized related submissions to other conferences and journals, and
+  \item appendices or technical reports containing extended proofs and mathematical derivations that are not essential for understanding of the paper.
+\end{itemize}
+
+Note that the contents of the supplemental material should be referred to appropriately in the paper and that reviewers are not obliged to look at it.
+
+All supplemental material must be zipped into a single file. There is a 20MB limit on the size of this file.
+
+\subsection{Dual submission}
+
+By submitting a manuscript to ICME, the authors guarantee that it has not been previously published (or accepted for publication) in substantially similar form. Furthermore, no paper which contains significant overlap with the contributions of this paper either has been or will be submitted during the ICME review period to either a journal or a conference.
+
+If there are papers that may appear to violate any of these conditions, then it is the authors' responsibility to (1) cite these papers (preserving anonymity as described in Section 2 of this example paper), (2) argue in the body of your paper why your ICME paper is nontrivially different from these concurrent submissions, and (3) include anonymized versions of those papers in the supplemental material.
+
+\section{Blind Review}
+
+Many authors misunderstand the concept of anonymizing for blind review. Blind review does not mean that one must remove citations to one's own work-in fact it is often impossible to review a paper unless the previous citations are known and available.
+
+Blind review means that you do not use the words ``my'' or ``our'' when citing previous work. That is all. (But see below for technical reports)
+
+Saying ``this builds on the work of Lucy Smith [1]'' does not say that you are Lucy Smith, it says that you are building on her work. If you are Smith and Jones, do not say ``as we show in [7]'', say ``as Smith and Jones show in [7]''and at the end of the paper, include reference 7 as you would any other cited work.
+
+An example of a bad paper:
+\begin{quote}
+  \begin{center}
+    An analysis of the frobnicatable foo filter.
+  \end{center}
+
+  In this paper we present a performance analysis of our
+  previous paper [1], and show it to be inferior to all
+  previously known methods. Why the previous paper was
+  accepted without this analysis is beyond me.
+
+    [1] Removed for blind review
+\end{quote}
+
+An example of an excellent paper:
+
+\begin{quote}
+  \begin{center}
+    An analysis of the frobnicatable foo filter.
+  \end{center}
+
+  In this paper we present a performance analysis of the
+  paper of Smith [1], and show it to be inferior to
+  all previously known methods.  Why the previous paper
+  was accepted without this analysis is beyond me.
+
+    [1] Smith, L and Jones, C. ``The frobnicatable foo
+  filter, a fundamental contribution to human knowledge''.
+  Nature 381(12), 1-213.
+\end{quote}
+
+If you are making a submission to another conference at the same time, which covers similar or overlapping material, you may need to refer to that submission in order to explain the differences, just as you would if you had previously published related work. In such cases, include the anonymized parallel submission~\cite{Authors12} as additional material and cite it as
+
+\begin{quote}
+  1. Authors. ``The frobnicatable foo filter'', ACM MM 2016 Submission ID 324, Supplied as additional material {\tt acmmm13.pdf}.
+\end{quote}
+
+Finally, you may feel you need to tell the reader that more details can be found elsewhere, and refer them to a technical report. For conference
+submissions, the paper must stand on its own, and not {\em require} the reviewer to go to a technical report for further details. Thus, you may say in
+the body of the paper ``further details may be found in~\cite{Authors12b}''.  Then submit the technical report as additional material. Again, you may not assume the reviewers will read this material.
+
+Sometimes your paper is about a problem which you tested using a tool which is widely known to be restricted to a single institution.  For example, let's say it's 1969, you have solved a key problem on the Apollo lander, and you believe that the ICME audience would like to hear about your solution.  The work is a development of your celebrated 1968 paper entitled ``Zero-g frobnication: How being the only people in the world with access to the Apollo lander source code makes us a wow at parties'', by Zeus.
+
+You can handle this paper like any other.  Don't write ``We show how to improve our previous work [Anonymous, 1968].  This time we tested the algorithm on a lunar lander [name of lander removed for blind review]''. That would be silly, and would immediately identify the authors. Instead write the following:
+\begin{quotation}
+  \noindent
+  We describe a system for zero-g frobnication.  This
+  system is new because it handles the following cases:
+  A, B.  Previous systems [Zeus et al. 1968] didn't
+  handle case B properly.  Ours handles it by including
+  a foo term in the bar integral.
+
+  ...
+
+  The proposed system was integrated with the Apollo
+  lunar lander, and went all the way to the moon, don't
+  you know.  It displayed the following behaviours
+  which show how well we solved cases A and B: ...
+\end{quotation}
+
+As you can see, the above text follows standard scientific convention, reads better than the first version, and does not explicitly name you as the authors. A reviewer might think it likely that the new paper was written by Zeus, but cannot make any decision based on that guess. He or she would have to be sure that no other authors could have been contracted to solve problem B.
+
+FAQ: Are acknowledgements OK?  No. Please omit them in the review copy and leave them for the final, camera ready copy.
+
+\section{Formatting Your Paper}
+
+All printed material, including text, illustrations, and charts, must be kept within a print area of 7 inches (178 mm) wide by 9 inches (229 mm) high. Do not write or print anything outside the print area. The top margin must be 1 inch (25 mm), except for the title page, and the left margin must be 0.75 inch (19 mm).  All text must be in a two-column format. Columns are to be 3.39 inches (86 mm) wide, with a 0.24 inch (6 mm) space between them. Text must be fully justified.
+
+\section{Page Title Section}
+
+The paper title (on the first page) should begin 1.38 inches (35 mm) from the top edge of the page, centered, completely capitalized, and in Times 14-point, boldface type.  The authors' name(s) and affiliation(s) appear below the title in capital and lower case letters.  Papers with multiple authors and affiliations may require two or more lines for this information.
+
+\section{Type-Style and Fonts}
+
+To achieve the best rendering both in the proceedings and from the CD-ROM, we strongly encourage you to use Times-Roman font. In addition, this will give the proceedings a more uniform look. Use a font that is no smaller than nine point type throughout the paper, including figure captions.
+
+If you use the smallest point size, there should be no more than 3.2 lines/cm (8 lines/inch) vertically. This is a minimum spacing; 2.75 lines/cm (7 lines/inch) will make the paper much more readable. Larger type sizes require correspondingly larger vertical spacing. Please do not double-space your paper. True-Type 1 fonts are preferred.
+
+The first paragraph in each section should not be indented, but all following paragraphs within the section should be indented as these paragraphs demonstrate.
+
+\section{Major Headings}
+
+Major headings, for example, ``1. Introduction'', should appear in all capital letters, bold face if possible, centered in the column, with one blank line before, and one blank line after. Use a period (``.'') after the heading number, not a colon.
+
+\subsection{Subheadings}
+
+Subheadings should appear in lower case (initial word capitalized) in boldface. They should start at the left margin on a separate line.
+
+\subsubsection{Sub-subheadings}
+
+Sub-subheadings, as in this paragraph, are discouraged. However, if you must use them, they should appear in lower case (initial word capitalized) and start at the left margin on a separate line, with paragraph text beginning on the following line.  They should be in italics.
+
+\section{Page Numbering}
+
+Please do {\bf not} paginate your paper. Page numbers, session numbers, and conference identification will be inserted when the paper is included in the proceedings.
+
+% Below is an example of how to insert images. Delete the ``\vspace'' line,
+% uncomment the preceding line ``\centerline...'' and replace ``imageX.ps''
+% with a suitable PostScript file name.
+% -------------------------------------------------------------------------
+%
+\begin{figure}[t]
+  \begin{minipage}[b]{1.0\linewidth}
+    \centering
+    % \centerline{\epsfig{figure=image1.ps,width=8.5cm}}
+    \vspace{1.5cm}
+    \centerline{(a) Result 1}\medskip
+  \end{minipage}
+  %
+  \begin{minipage}[b]{.48\linewidth}
+    \centering
+    % \centerline{\epsfig{figure=image3.ps,width=4.0cm}}
+    \vspace{1.5cm}
+    \centerline{(b) Results 2}\medskip
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.48\linewidth}
+    \centering
+    % \centerline{\epsfig{figure=image4.ps,width=4.0cm}}
+    \vspace{1.5cm}
+    \centerline{(c) Result 3}\medskip
+  \end{minipage}
+  %
+  \caption{Example of placing a figure with experimental results.}
+  \label{fig:res}
+\end{figure}
+
+\section{Illustrations, Graphs, and Photographs}
+\label{sec:illust}
+
+Illustrations must appear within the designated margins. They may span the two columns. If possible, position illustrations at the top of columns, rather than in the middle or at the bottom. Caption and number every illustration. All halftone illustrations must be clear black and white prints.
+
+Since there are many ways, often incompatible, of including images (e.g., with experimental results) in a \LaTeX document. Figure~\ref{fig:res} shows you an example of how to do this.
+
+\section{Tables and Equations}
+
+Tables and important equations must be centered in the column. Table~\ref{tab:cap} shows an example of a table while the equation
+\begin{eqnarray}
+  y &=& ax^2+bx+c \nonumber \\
+  ~ &=& (x+p)(x+q)
+\end{eqnarray}
+shows an example of an equation layout.
+
+\begin{table}[t]
+  \begin{center}
+    \caption{Table caption} \label{tab:cap}
+    \begin{tabular}{|c|c|c|}
+      \hline
+      % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+      Column One & Column Two & Column Three
+      \\
+      \hline
+      Cell 1     & Cell 2     & Cell 3       \\
+      Cell 4     & Cell 5     & Cell 6       \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+Large tables or long equations may span across both columns. Any table or equation that takes up more than one column width must be positioned either at the top or at the bottom of the page.
+
+\section{Footnotes}
+
+Use footnotes sparingly (or not at all!) and place them at the bottom of the column on the page on which they are referenced. Use Times 9-point type, single-spaced. To help your readers, avoid using footnotes altogether and include necessary peripheral observations in the text (within parentheses, if you prefer, as in this sentence).
+
+\section{Citations and References}
+
+List and number all bibliographical references at the end of the paper. The references can be numbered in alphabetic order or in order of appearance in the document. When referring to them in the text, type the corresponding reference number in square brackets as shown at the end of this sentence~\cite{Morgan2005}. All citations must be adhered to IEEE format and style. Examples such as~\cite{Morgan2005},~\cite{cooley65} and~\cite{haykin02} are given in Section 12.
+
+% References should be produced using the bibtex program from suitable
+% BiBTeX files (here: strings, refs, manuals). The IEEEbib.bst bibliography
+% style file from IEEE produces unsorted bibliography list.
+% -------------------------------------------------------------------------
+\bibliographystyle{IEEEbib}
+\bibliography{icme_template}
+
+\end{document}
