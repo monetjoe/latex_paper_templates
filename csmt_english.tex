@@ -1,0 +1,147 @@
+\documentclass[UTF8,a4paper]{article}
+\usepackage[UTF8, fontset=windows]{ctex}
+\usepackage[sort&compress,numbers]{natbib}
+\usepackage{ccaption} 
+\usepackage{booktabs}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{url}
+\usepackage[font={small,bf}]{caption}
+\usepackage[yyyymmdd]{datetime}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{marvosym}
+\usepackage{ifsym}
+\usepackage{caption}
+\usepackage{lmodern}
+\usepackage{hyperref}
+\geometry{left=3.18cm,right=3.18cm,top=2.54cm,bottom=2.54cm}
+\pagenumbering{gobble}
+
+\titleformat*{\section}{\songti\zihao{4}\bfseries}
+\titleformat*{\subsection}{\heiti\zihao{5}\bfseries}
+\titleformat*{\subsubsection}{\kaishu\zihao{5}\bfseries}
+
+\newenvironment{csmtAbstract}{\noindent \kaishu \small {\bfseries Abstract:}}{}
+\newenvironment{keywords}{\small \noindent{\bfseries Key Words:}}{}
+\newcommand{\weizhuProject}[2] {\noindent{\bfseries Recieved Date:~{\small \today}} \newline {\bfseries \indent ~~Support Project:} {\small #1} \newline {\bfseries \indent ~~Author:} {\small #2}}
+\newcommand{\weizhu}[1] {\noindent{\bfseries Recieved Date:\today} \newline {\bfseries \indent ~~Author:} #1}
+\renewcommand{\figurename}{Fig.}
+\renewcommand{\tablename}{Tab.}
+\renewcommand{\dateseparator}{--}
+
+\newcommand*{\affaddr}[1]{{\sffamily \small (\textit{#1})}} 
+\newcommand*{\affmark}[1][*]{\textsuperscript{#1}}
+
+\makeatletter
+\renewcommand\@maketitle{%
+	\hfill
+	\begin{minipage}{0.95\textwidth}
+		\vskip 2em
+		\let\footnote\thanks 
+		% Please select the applicable commands for foot notes
+		%{\centering \bfseries \zihao{3} \@title \thanks{\weizhuProject{Project Title}{Corresponding Author (1900--), M/F, Academic Degree, Academic Title, E-mail}}} \par } %For those funded by a grant
+		{\centering \bfseries \zihao{3} \@title \par} %\thanks{\weizhu{Corresponding Author (1900--), Shenyang Xu, Academic Degree, Academic Title, E-mail}} \par } %For those are not funded by a specific grant
+		\vskip 3em
+		{\centering \zihao{5} \textbf{\@author} \par}
+	\end{minipage}
+	\vskip 1em \par
+}
+\makeatother
+
+\title{A Holistic Review of Music Emotion Computing}
+
+\author{
+	\textmd{\large Author One\affmark[1], Author Two\affmark[1], Author Three\affmark[1,2(\Letter)]}\\\vspace{0.27cm}
+	\textmd{\affmark[1] University 1, City1, Country1}\\
+	\textmd{\affmark[2] University 2, City2, Country2}\\
+	\texttt{email@email}\\
+}
+
+\begin{document}
+
+\maketitle
+\vspace{0.84cm}
+\begin{csmtAbstract}
+	Thank you very much for your submission to CSMT. In this document, we are going to brief how the submitted manuscript should be formatted. Please obey these instructions for an easier review processing time. The CSMT organisation committee appreciates your cooperation. The deadline of submission for CSMT this year is set to 31st Aug.
+\end{csmtAbstract}
+
+\begin{keywords}
+	Submission, Instructions, Template
+\end{keywords}
+
+\section{Font and Font Size}
+
+Please use Times New Roman as the primary font in the manuscript. The font size for manuscript should be 10.5 pt with 16 pt font for title. The title, authors and key of field (e.g.``Abstract'' and ``Key Words'') should be in bold.
+
+The title of sections are suggested to use 14 pt emphasised with bold fonts. The title of subsections uses 10.5 pt with bold fonts. The title of subsubsection also uses 10.5 pt without emphasising in bold. Titles with lower levels are at your choice but we disencourage too many levels in submissions for better clarity. The example titles are shown as below.
+
+For a universal formatting with the submitted Chinese manuscripts, all paragraph are starting with 4 spaces of letters.
+
+\subsection{Title of Subsection}
+\subsubsection{Title of Subsubsection}
+
+\section{Captions}
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[scale=1.0]{figure/figure.png}
+	\caption{English Caption}
+	\label{fig:figure}
+\end{figure}
+
+English Manuscripts need only English captions compared dropping the bilingual requirements in Chinese Manuscripts. The captions for Figure should appear below the diagrams whereas the captions of Tabs should appear on the top of a table. The captions should use bold font regardless of their positions. Fig. \ref{fig:figure} gives an example of a diagram.
+
+No vertical lines in the tables and the top and bottom rules should be in bold. This is a classical application of the \texttt{booktabs} packages in \LaTeX. Tab \ref{tab:table} has shown an example of tables. Please make sure the width of tables does not exceed the width of text.
+
+\begin{table}[htb]
+	\centering
+	\caption{English Caption}
+	\begin{tabular}{ccc}
+		\toprule[1pt]
+		  & B & C \\
+		\midrule[0.5pt]
+		1 & X & X \\
+		\midrule[0.5pt]
+		2 & X & X \\
+		\bottomrule[1pt]
+	\end{tabular}
+	\label{tab:table}
+\end{table}
+
+Equations should be ordered with a number is a pair of brackets. The label should be placed at the right side of the page. For instance, Eq. (\ref{eq:1}) is an equation.
+
+\begin{equation}
+	A=1
+	\label{eq:1}
+\end{equation}
+
+\section{Page Layout}
+
+All manuscript should use A4 paper with top-bottom margins set to 2.54 cm and left-right margins set to 3.18 cm. Please do not set page numbers in the manuscripts.
+
+\section{References}
+
+The reference style obeys GB/T 7714-2015 standard. A reference style file is provided. Please specify the location of conference in \texttt{Address} field for conference papers and specify \texttt{School} field for citing thesis as the GB/T 7714-2015 standard forces these fields to be filled in. Otherwise, [S. l.] and [S. n.] will appear in the reference lists for ``unknown publishing locations'' and ``unknown publishers''. Examples are shown in various reference items. \cite{eArticle, eConference, ebook}
+
+The style file are provided by \texttt{www.overleaf.com/latex/templates/tagged/xjtu} under the license of Common Creativity 4.0. The CSMT committee appreciate the effort made by the author and request a proper citation if any parts of the templates are used for any purposes other than formatting a manuscript for a CSMT submission.
+
+For researchers speaking Chinese, all references must be in English for the submissions in English.
+
+\section{Review Process}
+
+All submissions of CSMT are reviewed by a double-blinded process. Please keep the author information unchanged until the camera-ready stage. Make sure the author information does not disclose in any part of the manuscript especially in literature reviews. Avoid to use ``I'' and ``we'' when citing a previous work. Use family names instead. For those submissions disclose author information, the CSMT technical committee are likely to ask the author to correct the issues or the submissions may be directly rejected.
+
+\section{Page Limit}
+
+All manuscripts are limited to 6 pages. Please submit the manuscripts via \url{https://cmt3.research.microsoft.com}. The system is planned to be opened by May.
+
+\section{Remarks}
+As this is the very first CSMT template, the author acknowledge there are probably many parts of the template should be further improved. We encourage the authors correct the templates obeying the principles stated above. Please be aware that the footnote for titles can be changed to show the supported grant at camera-ready stage.
+
+\renewcommand{\refname}{References}
+\bibliographystyle{IEEEbib}
+\bibliography{csmt_english}
+
+\end{document}
