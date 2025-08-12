@@ -1,0 +1,98 @@
+@article{IEEEexample:article_typical,
+  author  = {S. Zhang and C. Zhu and J. K. O. Sin and P. K. T. Mok},
+  title   = {A Novel Ultrathin Elevated Channel Low-temperature 
+             Poly-{Si} {TFT}},
+  journal = IEEE_J_EDL,
+  volume  = {20},
+  month   = nov,
+  year    = {1999},
+  pages   = {569-571}
+}
+
+
+journal article using et al.
+The (five) authors are actually: F. Delorme, S. Slempkes, G. Alibert, 
+B. Rose, J. Brandon
+The month (July) was not given here.
+From the September 1998 issue of "IEEE Journal on Selected Areas in
+Communications", page 1257, reference #28.
+@article{IEEEexample:articleetal,
+  author  = {F. Delorme and others},
+  title   = {Butt-jointed {DBR} Laser With 15 {nm} Tunability Grown
+             in Three {MOVPE} Steps},
+  journal = {Electron. Lett.},
+  volume  = {31},
+  number  = {15},
+  year    = {1995},
+  pages   = {1244-1245}
+}
+
+
+a paper in a conference proceedings
+"conference" can be used as an alias for "inproceedings"
+From the June 2002 issue of "Journal of Microelectromechanical Systems",
+page 205, reference #16.
+@inproceedings{IEEEexample:conf_typical,
+  author    = {R. K. Gupta and S. D. Senturia},
+  title     = {Pull-in Time Dynamics as a Measure of Absolute Pressure},
+  booktitle = {Proc. {IEEE} International Workshop on
+               Microelectromechanical Systems ({MEMS}'97)},
+  address   = {Nagoya, Japan},
+  month     = jan,
+  year      = {1997},
+  pages     = {290-294}
+}
+
+
+a book
+From the May 2002 issue of "IEEE Transactions on Magnetics",
+page 1466, reference #4.
+@book{IEEEexample:book_typical,
+  author    = {B. D. Cullity},
+  title     = {Introduction to Magnetic Materials},
+  publisher = {Addison-Wesley},
+  address   = {Reading, MA},
+  year      = {1972}
+}
+
+
+
+
+Other examples
+
+journal article with large page numbers, IEEE will divide numbers 5 digits
+or longer into groups of three with small spaces between them. Page ranges
+can be separated via either "-" or "--", IEEEtran.bst will automatically
+convert the separator dash(es) to "--".
+Authors and/or IEEE do not always provide/use the journal number, but it
+was used in this case. IEEEtran.bst can be configured to ignore journal
+numbers if desired.
+From the August 2000 issue of "IEEE Photonics Technology Letters",
+page 1039, reference #11.
+@article{IEEEexample:articlelargepages,
+  author  = {A. Castaldini and A. Cavallini and B. Fraboni
+             and P. Fernandez and J. Piqueras},
+  title   = {Midgap Traps Related to Compensation Processes in
+             {CdTe} Alloys},
+  journal = {Phys. Rev. B.},
+  volume  = {56},
+  number  = {23},
+  year    = {1997},
+  pages   = {14897-14900}
+}
+
+
+journal article with dual months 
+use the BibTeX "#" concatenation operator
+From the March 2002 issue of "IEEE Transactions on Mechatronics",
+page 21, reference #8.
+@article{IEEEexample:articledualmonths,
+  author  = {Y. Okada and K. Dejima and T. Ohishi},
+  title   = {Analysis and Comparison of {PM} Synchronous Motor and
+             Induction Motor Type Magnetic Bearings},
+  journal = IEEE_J_IA,
+  volume  = {31},
+  month   = sep # {/} # oct,
+  year    = {1995},
+  pages   = {1047-1053}
+}
