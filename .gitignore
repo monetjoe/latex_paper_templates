@@ -278,3 +278,4 @@ TSWLatexianTemp*
 *.lpz
 *.pdf
 rename.sh
+test.*
