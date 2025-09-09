@@ -1,10 +1,9 @@
-
 %!TeX program = xelatex
 %\documentclass[]{ctexart}
 \documentclass[a4paper,scheme=chinese,linespread=1.6]{ctexbook}
 %\usepackage[a4paper, left=1.27cm, right=1.27cm, top=1.27cm, bottom=1.27cm]{geometry}
 \usepackage[a4paper, left=3.5cm, right=3.5cm, top=3.18cm, bottom=3.18cm]{geometry}
-\usepackage{ctex}
+% \usepackage{ctex}
 \usepackage{subcaption}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -64,13 +63,13 @@
 
 
 	\begin{center}
-		{\fontsize{36pt}{36pt}\fontfamily{微软雅黑}\selectfont 博~\:士~\:学~\:位~\:论~\:文}\vspace{2cm}
+		{\fontsize{36pt}{36pt}\fontfamily{lmr}\selectfont 博~\:士~\:学~\:位~\:论~\:文}\vspace{2cm}
 
 		{\fontsize{32pt}{32pt}\selectfont\bfseries 标题第一行\protect\\标题第二行 \par}\vfill
 
 		{\LARGE
 			作者姓名：\fixeduline{张三}\\
-			学　　号：\fixeduline{114514}\\
+			学~~~~~~~号：\fixeduline{114514}\\
 			所在系部：\fixeduline{音乐人工智能与音乐信息科技}\\
 			研究方向：\fixeduline{音乐人工智能}\\
 			导师姓名：\fixeduline{李四~教授 \quad 王五~教授}\\
@@ -91,7 +90,7 @@
 \begin{multicols}{2}
 	\vfill\null
 	\columnbreak
-	\textbf{作者签名:}~~~~\includegraphics[width=0.3\columnwidth]{} %括号里是作者电子签
+	\textbf{作者签名:}~~~~\includegraphics[width=0.3\columnwidth]{media/sign.jpg} %括号里是作者电子签
 	\par
 	\vspace{0.3cm}
 \end{multicols}
@@ -104,9 +103,9 @@
 
 本人授权中央音乐学院，可以将本论文提交中国学术期刊（光盘版）电子杂志社在《中国优秀博硕士学位论文数据库》中发表，可以采用影印、缩印或扫描等复制手段保存学位论文。
 
-\textbf{作者签名: }\includegraphics[width=0.125\columnwidth]{} %括号里是作者电子签
+\textbf{作者签名: }\includegraphics[width=0.125\columnwidth]{media/sign.jpg} %括号里是作者电子签
 ~~~~~~~~~~~~~~~
-\textbf{导师签名: }\includegraphics[width=0.125\columnwidth]{}\includegraphics[width=0.15\columnwidth]{} %二位导师签名
+\textbf{导师签名: }\includegraphics[width=0.125\columnwidth]{media/sign.jpg}\includegraphics[width=0.15\columnwidth]{media/sign.jpg} %二位导师签名
 \par
 \hspace{1cm}
 
@@ -144,7 +143,7 @@ bibtex条目是这样引用的\cite{kolasinski2008framework}
 图片这样插入
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.85\columnwidth]{media/spatial_playback_design.png}
+	\includegraphics[width=0.85\columnwidth]{media/logo.png}
 	\caption{标签}
 	\label{fig:fig1-4}  % 用于交叉引用的标签，自己随便写
 \end{figure}
